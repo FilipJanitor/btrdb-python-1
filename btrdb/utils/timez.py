@@ -151,7 +151,7 @@ def ns_delta(days=0, hours=0, minutes=0, seconds=0, milliseconds=0, \
     """
     MICROSECOND = 1000
     MILLESECOND = MICROSECOND * 1000
-    SECOND = MILLESECOND * 1000
+    SECOND = MILLISECOND * 1000
     MINUTE = SECOND * 60
     HOUR = MINUTE * 60
     DAY = HOUR * 24
@@ -160,7 +160,7 @@ def ns_delta(days=0, hours=0, minutes=0, seconds=0, milliseconds=0, \
     nanoseconds += hours * HOUR
     nanoseconds += minutes * MINUTE
     nanoseconds += seconds * SECOND
-    nanoseconds += milliseconds * MILLESECOND
+    nanoseconds += milliseconds * MILLISECOND
     nanoseconds += microseconds * MICROSECOND
 
     return int(nanoseconds)
